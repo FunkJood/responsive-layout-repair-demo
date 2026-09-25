@@ -2,7 +2,8 @@
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Responsive layout repair — independent work sample</title>
+<title>Responsive layout repair — interactive CSS demo</title>
+<meta name="description" content="Compare broken and repaired responsive CSS layouts. Try the free interactive demo, then explore a local toolkit for checking your own pages.">
 <style>
 *{box-sizing:border-box}body{margin:0;background:#f7f5f0;color:#223832;font:17px/1.6 system-ui,sans-serif}
 header,main,footer{max-width:1100px;margin:auto;padding:32px 24px}header{border-bottom:1px solid #d7ddd5}
@@ -19,6 +20,7 @@ body.broken .hero{height:100px;aspect-ratio:auto}
 </style>
 <header><p class="label">Independent work sample · no client data</p><h1>A small layout fix should stay a small change.</h1>
 <p>Reproduced examples of overflowing cards, a covering footer, and a distorted visual. This is a synthetic demonstration, not a completed client project.</p>
+<p>Want to check your own pages? <a href="https://purpledusttim.gumroad.com/l/gntlof">Explore the paid Responsive Layout Check Kit</a> for local screenshots, overflow checks and reports. This free demo needs no installation.</p>
 <nav><a href="?mode=broken">View reproduced defects</a><a href="?mode=fixed">View repaired layout</a></nav><p class="notice" id="state"></p></header>
 <main>
 <svg class="hero" viewBox="0 0 900 300" preserveAspectRatio="none" role="img" aria-label="Geometric aspect-ratio test graphic"><rect width="900" height="300" fill="#d8e1d7"/><circle cx="450" cy="150" r="110" fill="#739083"/><circle cx="450" cy="150" r="65" fill="#f7f5f0"/></svg>
@@ -29,5 +31,5 @@ body.broken .hero{height:100px;aspect-ratio:auto}
 <article><h2>Fourth workshop</h2><p>The final card must remain above the footer at every tested viewport width.</p><button class="button" type="button">Demo booking button</button></article>
 </section></main>
 <footer><strong>Try the free demo, then check your own pages.</strong><p>This page is an original synthetic example. The separate paid toolkit provides a local screenshot and overflow-checking CLI, reports and a repair checklist.</p><a href="https://purpledusttim.gumroad.com/l/gntlof">View Responsive Layout Check Kit on Gumroad</a><p>No client testimonials or automatic repair claims.</p></footer>
-<script>const broken=new URLSearchParams(location.search).get('mode')==='broken';document.body.classList.toggle('broken',broken);document.getElementById('state').textContent=broken?'Reproduced defects — intentionally broken':'Repaired layout — check the accompanying browser report';</script>
+<script>const broken=new URLSearchParams(location.search).get('mode')==='broken';document.body.classList.toggle('broken',broken);document.getElementById('state').textContent=broken?'Reproduced defects — intentionally broken':'Repaired layout — resize your browser and compare both modes';</script>
 </html>
